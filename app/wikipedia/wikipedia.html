@@ -1,0 +1,8 @@
+<h3>Wikipedia search</h3>
+<input #term class="form-control" (keyup)="search(term.value)">
+<ul>
+  <!-- async.pipeを使って非同期データをtemplate内で処置している -->
+  <li *ngFor="#item of items | async">
+    {{item}}
+  </li>
+</ul>

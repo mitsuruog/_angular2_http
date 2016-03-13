@@ -1,0 +1,12 @@
+<div class="container">
+  <h3>Heroes</h3>
+  <p *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</p>
+  <ul>
+    <li *ngFor="#hero of heroes">{{hero.name}}</li>
+  </ul>
+
+  <div>
+    <input class="form-control" #newHero (keyup)="0">
+    <button type="button" class="btn btn-default" (click)="addHero(newHero.value)">add hero</button>
+  </div>
+</div>
