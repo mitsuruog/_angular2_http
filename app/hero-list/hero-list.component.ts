@@ -23,12 +23,19 @@ export class HeroListComponent {
     this.service.getHeroes()
       .subscribe(
         heroes => this.heroes = heroes,
-        error => this.errorMessage = error
+        error => this.errorMessage = <any>error
       );
   }
   
-  addHero() {
-    
+  addHero(name: string) {
+    if(!name) {
+      return;
+    }
+    this.service.addHero(name)
+      .subscribe(
+        hero => this.heroes.push(hero),
+        error => this.errorMessage = <any>error
+      );
   }
   
 }

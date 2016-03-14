@@ -1,9 +1,13 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Minimum starter kit for angular2</a>
-    <p class="navbar-text navbar-right"><a href="https://github.com/mitsuruog/angular2-minimum-starter" class="navbar-link">github</a></p>
+    <p class="navbar-text navbar-right"><a href="https://github.com/mitsuruog/_angular2_http" class="navbar-link">github</a></p>
   </div>
 </nav>
 <div class="container">
+  <ul class="nav nav-tabs">
+    <li role="presentation"><a [routerLink]="['HeroList']">HeroList</a></li>
+    <li role="presentation"><a [routerLink]="['Wikipedia']">Wikipedia</a></li>
+  </ul>
   <router-outlet></router-outlet>
 </div>
